@@ -15,7 +15,9 @@
 
         <header class="header">
             <h1>{{ app_title }}</h1>
-            <input class="new-todo" placeholder="What needs to be done?" autofocus>
+            <form name="form" novalidate ng-submit="addTask(form)">
+                <input ng-model="new_task" name="new_task" class="new-todo" placeholder="What needs to be done?" autofocus>
+            </form>
         </header>
 
         <!-- This section should be hidden by default and shown when there are todos -->
